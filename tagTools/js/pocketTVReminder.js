@@ -5,7 +5,7 @@
 *	领瓜子功能
 ***/
 
-avascript:void(
+javascript:void(
 function(){
 	/**自动运行程序|
 	 **检查网页是否是直播间（检测聊天区域的ID是否能get）
