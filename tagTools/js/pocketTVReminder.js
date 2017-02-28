@@ -31,7 +31,7 @@ function(){
 				addAudio();
 				n=curr;
 			}
-		},30000);
+		},15000);
 
 
 	}else{
