@@ -49,10 +49,10 @@ function(){
 		audio.autoplay="autoplay";
 		audio.id="bubbleAudio";
 		var source=document.createElement("source");
-		source.src="http://localhost:8090/tagTools/audio/bubble.mp3";
+		source.src="http://wilbermeng.github.io/tagTools/audio/bubble.mp3";
 		audio.appendChild(source);
 		var source=document.createElement("source");
-		source.src="http://localhost:8090/tagTools/audio/bubble.wav";
+		source.src="http://wilbermeng.github.io/tagTools/audio/bubble.wav";
 		audio.appendChild(source);
 		document.getElementsByTagName("body")[0].appendChild(audio);
 	}
