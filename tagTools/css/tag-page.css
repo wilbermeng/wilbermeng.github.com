@@ -59,8 +59,11 @@ nav{
 #nav-bar-list>li>a{
 	display:block;
 	font-size:1.1em;
+	color:#c8c9ca;
 }
-
+#nav-bar-list>li>a{
+	color:#fff;
+}	
 /**页面主体**/
 main{
 	margin:0 auto;
