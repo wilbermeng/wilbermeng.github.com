@@ -1,0 +1,134 @@
+/**小电视插件页面CSS样式表**/
+/**通用设置|包含大屏幕、中等屏幕、小屏幕和超小屏幕**/
+/**全局设置**/
+*{
+	box-sizing:border-box;
+	font-family:"Microsoft Yahei";
+	text-align:center;
+}
+body{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+a{
+	text-decoration:none;
+	color:#fff;
+}
+ul{
+	list-style:none;
+}
+
+/**顶部导航栏**/
+nav{
+	width:100%;
+	height:55px;
+	background:#24292e;
+	box-shadow:0 0 10px 0 gray;
+}
+#nav-bar{
+	margin:0 auto;
+	height:100%;
+	width:80%;
+}
+#nav-bar:before,
+#nav-bar:after{
+	content:"",
+	clear:both;
+}
+#nav-bar-list{
+	display:inline-block;
+	float:right;
+	margin-right:2px;
+	margin-top:0;
+}
+#nav-bar li{
+	display:inline-block;
+	height:2.1em;
+	padding-left:5px;
+}
+#nav-bar li span{
+	display:block;
+	margin-top:10px;
+	width:34px;
+	height:34px;
+	background:url(".../images/github-icon.png");
+	border:1px solid transparent;
+	border-radius:50%;
+}
+#nav-bar-list>li>a{
+	display:block;
+	font-size:1.1em;
+}
+
+/**页面主体**/
+main{
+	margin:0 auto;
+}
+#tag-container,
+#tips{
+	font-size:1.2em;
+}
+#tag-button{
+	position:relative;
+	margin:2px auto;
+	width:250px;
+	height:50px;
+	border:2px solid #1973c6;
+	border-radius:10px;
+	background-color:#1993ff;
+	box-shadow:2px 2px 2px 0 gray;
+}
+#tag-button>a{
+	display:block;
+	height:100%;
+	width:100%;
+	vertical-align:middle;
+	padding-top:9px;
+	font-size:1.2em;
+}
+#log{
+	margin:0 auto;
+}
+#log,
+#log-title,
+.log-content{
+	text-align:left;
+	font-family:.8em;
+}
+
+/**页脚**/
+footer{
+	border-top:1px solid #ddd;
+	color:#ccc;
+}
+
+/**大屏幕设备样式**/
+@media only screen and (min-width:980px){
+	main{
+		width:80%;
+	}
+	#log{
+		width:90%
+	}
+}
+
+/**中等设备样式**/
+@media only screen and (min-width:600px) and (max-width:980px){
+	main{
+		width:80%;
+	}
+	#log{
+		width:95%
+	}
+}
+
+/**小屏幕&超小屏幕设备样式**/
+@media only screen and (max-width:600px){
+	main{
+		width:100%;
+	}
+	#log{
+		width:100%;
+	}
+}
