@@ -1,23 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
  <head>
-  <title> new document </title>
-  <meta name="generator" content="editplus" />
-  <meta name="author" content="" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
   <meta charset="utf-8"/>
+  <title>小电视❤银瓜子</title>
+  <link rel="stylesheet" href="css/tag-page.css"/>
  </head>
 
  <body>
-  <h2>自动识别小电视抽奖标签</h2>
-  <a href="javascript:(
-		function(){
-			var jsCode = document.createElement('script'); 
-			jsCode.setAttribute('src', '//wilbermeng.github.io/tagTools/js/pocketTVReminder.js'); 
-			document.body.appendChild(jsCode); 
-		}
-	)();"
-	 title="拖我至书签栏~">❤小电视</a>
+    <nav>
+        <!--TODO:添加导航栏内容：未知-->
+        <div id="nav-bar">
+            <ul id="nav-bar-list">
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="//wilbermeng.github.io">visit github</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2 id="main-title">自动识别小电视抽奖标签</h2>
+        <div id="tag-container">
+            <div id="tag-button">
+                <a href="javascript:(function(){var jsCode=document.createElement('script');jsCode.setAttribute('src','js/pocketTVReminder.js');document.body.appendChild(jsCode);})();" title="拖我至书签栏~">❤小电视</a>
+            </div>
+        </div>
+        <div id="tips">
+            <p>使用方式：↑将上面的标签拖动至书签栏保存即可~</p>
+        </div>
+        <hr/>
+        <div id="log">
+            <h5 id="log-title">更新日志：</h5>
+            <pre class="log-content">
+# tagTools
+for bilibili
+vision:0.0.1
+            
+更新日期：2017-2-27
+
+实现功能：
+* 获取Bilibili直播间小电视抽奖的信息，并有声音提示
+
+目前仅在本地建立服务器后使用
+
+下个版本即将添加：
+* 领瓜子（仅提示）功能
+
+预计之后版本还会添加：
+* 自动领瓜子
+* 自动领小电视（搁置中）
+
+版本问题：每天第一次小电视提示可能因为离开页面而失败 ，暂未确定原因
+            </pre>
+        </div>
+    </main>
+    <footer>
+        ©&nbsp;WILBER_MENG
+    </footer>
  </body>
 </html>
