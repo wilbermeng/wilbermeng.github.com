@@ -52,7 +52,7 @@ nav{
 	margin-top:10px;
 	width:34px;
 	height:34px;
-	background:url("../../images/github-icon.png");
+	background:url(".../images/github-icon.png");
 	border:1px solid transparent;
 	border-radius:50%;
 }
@@ -61,18 +61,22 @@ nav{
 	font-size:1.1em;
 	color:#c8c9ca;
 }
-#nav-bar-list>li>a{
+#nav-bar-list>li>a:hover{
 	color:#fff;
-}	
+}
+
 /**页面主体**/
 main{
 	margin:0 auto;
 }
-#tag-container,
+.tag-container,
 #tips{
 	font-size:1.2em;
 }
-#tag-button{
+.tag-container{
+	margin-top:10px;
+}
+.tag-button{
 	position:relative;
 	margin:2px auto;
 	width:250px;
@@ -82,7 +86,7 @@ main{
 	background-color:#1993ff;
 	box-shadow:2px 2px 2px 0 gray;
 }
-#tag-button>a{
+.tag-button>a{
 	display:block;
 	height:100%;
 	width:100%;
