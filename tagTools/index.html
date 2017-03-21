@@ -21,14 +21,24 @@
         </div>
     </nav>
     <main>
-        <h2 id="main-title">自动识别小电视抽奖标签</h2>
-        <div id="tag-container">
-            <div id="tag-button">
+        <h2 id="main-title">领瓜子&小电视提醒标签</h2>
+        <div class="tag-container">
+            <div class="tag-button">
                 <a href="javascript:(function(){var jsCode=document.createElement('script');jsCode.setAttribute('src','//wilbermeng.github.io/tagTools/js/pocketTVReminder.js');document.body.appendChild(jsCode);})();" title="拖我至书签栏~">❤小电视</a>
             </div>
         </div>
+        <div class="tag-container">
+            <div class="tag-button">
+                <a href="javascript:(function(){var OCRCode=document.createElement('script');OCRCode.setAttribute('src','//wilbermeng.github.io/tagTools/js/ocrad.js');var jsCode=document.createElement('script');jsCode.setAttribute('src','//wilbermeng.github.io/tagTools/js/getTreasure.js');document.body.appendChild(jsCode);})();" title="拖我至书签栏~">❤领瓜子</a>
+            </div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-button">
+                <a href="javascript:(function(){var OCRCode=document.createElement('script');OCRCode.setAttribute('src','//wilbermeng.github.io/tagTools/js/ocrad.js');var silverCode=document.createElement('script');silverCode.setAttribute('src','//wilbermeng.github.io/tagTools/js/getTreasureWithNoAuthorLink.js');document.body.appendChild(jsCode);var tvCode=document.createElement('script');tvCode.setAttribute('src','//wilbermeng.github.io/tagTools/js/pocketTVReminder.js');document.body.appendChild(jsCode);})();" title="拖我至书签栏~">领瓜子❤小电视</a>
+            </div>
+        </div>
         <div id="tips">
-            <p>使用方式：↑将上面的标签拖动至书签栏保存即可~</p>
+            <p>使用方式：↑将上面的*任意*标签拖动至书签栏保存即可~请勿重复使用多个标签</p>
         </div>
         <hr/>
         <div id="log">
@@ -36,6 +46,26 @@
             <pre class="log-content">
 # tagTools
 for bilibili
+
+vision:0.1.1
+
+更新日期：2017-3-21
+
+添加功能：
+* 银瓜子领取
+
+不适用场合：
+* 当UP修改直播间的HTTP协议为HTTPS协议时
+
+整合：
+* 领瓜子功能
+* 小电视提醒功能
+* 领瓜子+小电视提醒
+
+预计之后版本还会添加：
+* 自动领小电视功能
+
+<hr/>
 vision:0.0.1
             
 更新日期：2017-2-27
