@@ -72,6 +72,7 @@ function(){
 					console.log("今日已完成领取啦~");
 					timer=null;
 				}else{
+					refreshBtn.click();//刷新图片，减少计时
 					var result=OCRImage();//图片识别
 					inputPanel.value=result;
 					submitBtn.click();
@@ -81,7 +82,7 @@ function(){
 					closeBtn.click();
 				}
 			}
-		},5000);
+		},2000);
 	}else{
 		//非bilibili直播间页面
 		console.log("当前页面没有银瓜子可领╮(╯▽╰)╭");
@@ -94,8 +95,8 @@ function(){
 
 	//是否有剩余瓜子可领
 	function isFinishGettingSilver(){
-		//判断倒计时完成之后点开的面板是否为领取面板，否即表示本日瓜子已完成领取
-		return acquiringParentPanel.display=="none";
+		//判断倒计时完成之后宝箱面板总结点的display是否为none
+		return boxPanelContainer.display=="none";
 	}
 
 	//获取图片并转换为字符串后计算
