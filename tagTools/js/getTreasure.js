@@ -96,7 +96,7 @@ function(){
 	//是否有剩余瓜子可领
 	function isFinishGettingSilver(){
 		//判断倒计时完成之后宝箱面板总结点的display是否为none
-		return boxPanelContainer.display=="none";
+		return countDown.innerHTML=="--:--";
 	}
 
 	//获取图片并转换为字符串后计算
