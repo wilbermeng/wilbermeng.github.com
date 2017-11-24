@@ -33,7 +33,7 @@ function(){
 		timer=setInterval(function(){
 			if(isFinishCountDown()){
 				//倒计时完成
-				／／boxImg.click();//点击打开领取界面
+				//boxImg.click();//点击打开领取界面
 				if(isFinishGettingSilver()){
 					//当天银瓜子已领完时
 					closeBtn.click();
