@@ -1,70 +1,39 @@
 /**
-*	当前版本：0.0.1
-*	实现功能：获取Bilibili直播间，领取银瓜子
+*	当前版本：1.0.1
+*	实现功能：B站改版，节点树更清晰
 **/
 /**
 *	步骤：
-*	1.获取播放器节点，id="player-containers"
+*	1.获取播放器节点，id="gift-control-vms"
 *	2.实时监控倒计时countDown.innerHTML=="00:00"
 *	3.
 *	X.领取完成后取消定时器
-*
-*	需要的变量：
-*		·countDown：#play-container->第一个div->第一个div->第三个div，用于获取倒计时，实时获取
-*		·closeBtn：inputPanel.parentNode.parentNode.parentNode.firstChild/第一个div，领取完成后关闭按钮（？？？貌似会自动关闭，可不使用）
-*		·acquiringPanel：inputBox的父节点
-*		·silverSeeds：acquiringPanel下的span 领取的银瓜子数
-*		·inputPanel：#play-container下的input（唯一）
-*		·calculateImg：acquiringPanel下的img
-*		·refreshBtn：acquiringPanel下的a
-*		·submitBtn：acquiringPanel下的button
-*
-*	节点树：
-*	播放器节点#play-container
-*		·宝箱面板 boxPanelContainer
-*			·宝箱节点
-*				·宝箱图标（第二个div boxImg 用于点击显示面板，刷新算数img）
-*				·倒计时显示（第三个div，countDown）
-*			·面板节点
-*				·tip-content
-*					·close-btn（第一个div）
-*					·等待面板（第三个div）
-*						·...（目前不用）
-*					·领取面板（第四个div）
-*						·dp-i-block（大概是容器的div）
-*							·div 文字容器
-*								*span 本次领取银瓜子数
-*							·input (整个节点唯一的一个input!）
-*							·img 算数题
-*							·a 刷新
-*							·button 领取
-*		·播放器装饰节点
-*			...
 **/
 javascript:void(
 function(){
 	/**自动运行**/
-	if(document.getElementById("player-container")){
+	if(document.getElementById("gift-control-vm")){
 		//bilibili直播间页面
 		console.log("自动领取银瓜子中...");
 		
 		//初始化 | 通用变量
 		var timer=null;//定时器
-		var boxPanelContainer=document.getElementById("player-container").getElementsByTagName("div")[0];//宝箱面板总结点
-		var boxImg=boxPanelContainer.getElementsByTagName("div")[0].getElementsByTagName("div")[1];//宝箱图标节点，用于点击
-		var panel=boxPanelContainer.getElementsByTagName("div")[1];//面板总结点，用于判断是否需要关闭面板
-		var countDown=boxPanelContainer.getElementsByTagName("div")[0].getElementsByTagName("div")[2];//倒计时节点
+		var giftControlVm=document.getElementById("gift-control-vm");//礼物、宝箱总节点
+		var boxPanelContainer=giftControlVm.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("div")[0];//宝箱面板总结点
+		var boxImg=boxPanelContainer.getElementsByTagName("div")[0];//宝箱图标节点，用于点击（可省略？
+		var panel=boxPanelContainer.getElementsByTagName("div")[2];//l领瓜子面板总结点，用于判断是否需要关闭面板
+		var countDown=boxPanelContainer.getElementsByTagName("div")[1].getElementsByTagName("div")[1].getElementsByTagName("span")[1];//倒计时节点
 		var inputPanel=boxPanelContainer.getElementsByTagName("input")[0];//输入框
 		var acquiringPanel=inputPanel.parentNode;//领取面板中输入框的直接容器
-		var acquiringParentPanel=acquiringPanel.parentNode;//领取面板，用于判断是否全部领取完成
-		var closeBtn=acquiringParentPanel.parentNode.getElementsByTagName("div")[0];//关闭面板按钮
-		var refreshBtn=acquiringPanel.getElementsByTagName("a")[0];//刷新按键
-		var submitBtn=acquiringPanel.getElementsByTagName("button")[0];//领取按键
+		//var acquiringParentPanel=acquiringPanel.parentNode;//领取面板，用于判断是否全部领取完成
+		var closeBtn=panel.getElementsByTagName("button")[4];//关闭面板按钮
+		var refreshBtn=acquiringPanel.getElementsByTagName("button")[0];//刷新按键
+		var submitBtn=panel.getElementsByTagName("button")[3];//领取按键
 
 		timer=setInterval(function(){
 			if(isFinishCountDown()){
 				//倒计时完成
-				boxImg.click();//点击打开领取界面
+				／／boxImg.click();//点击打开领取界面
 				if(isFinishGettingSilver()){
 					//当天银瓜子已领完时
 					closeBtn.click();
@@ -94,8 +63,8 @@ function(){
 
 	//是否有剩余瓜子可领
 	function isFinishGettingSilver(){
-		//判断倒计时完成之后宝箱面板总结点的display是否为none
-		return boxPanelContainer.display=="none";
+		//判断文字吧还是
+		//return boxPanelContainer.display=="none";
 	}
 
 	//获取图片并转换为字符串后计算
