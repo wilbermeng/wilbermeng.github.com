@@ -20,15 +20,19 @@ function(){
 		var timer=null;//定时器
 		var giftControlVm=document.getElementById("gift-control-vm");//礼物、宝箱总节点√
 		var boxPanelContainer=giftControlVm.getElementsByTagName("div")[0].getElementsByTagName("div")[0].getElementsByTagName("div")[0];//宝箱面板总结点
-		var boxImg=boxPanelContainer.getElementsByTagName("div")[0];//宝箱图标节点，用于点击（可省略？
+		console.log(boxPanelContainer);
+		//var boxImg=boxPanelContainer.getElementsByTagName("div")[0];//宝箱图标节点，用于点击（可省略？
 		var panel=boxPanelContainer.getElementsByTagName("div")[2];//领瓜子面板总结点，用于判断是否需要关闭面板
+		console.log(panel);
 		var countDown=boxPanelContainer.getElementsByTagName("div")[1].getElementsByTagName("div")[1].getElementsByTagName("span")[1];//倒计时节点
+		console.log(countDown);
 		var inputPanel=boxPanelContainer.getElementsByTagName("div")[2].getElementsByTagName("div")[1].getElementsByTagName("input")[0];//输入框
 		var acquiringPanel=inputPanel.parentNode;//领取面板中输入框的直接容器
 		//var acquiringParentPanel=acquiringPanel.parentNode;//领取面板，用于判断是否全部领取完成
 		var closeBtn=panel.getElementsByTagName("button")[0];//关闭面板按钮
 		var refreshBtn=acquiringPanel.getElementsByTagName("button")[0];//刷新按键
 		var submitBtn=panel.getElementsByTagName("div")[2].getElementsByTagName("div")[2].getElementsByTagName("button")[3];//领取按键
+
 
 		timer=setInterval(function(){
 			if(isFinishCountDown()){
