@@ -26,10 +26,12 @@ function(){
 		console.log(panel);
 		var countDown=boxPanelContainer.getElementsByTagName("div")[1];//倒计时节点
 		console.log(countDown);
+		var closeBtn=panel.getElementsByTagName("button")[0];//关闭面板按钮
+		
 		var inputPanel=panel.getElementsByTagName("div")[1].getElementsByTagName("input")[0];//输入框
+		console.log(inputPanel);
 		var acquiringPanel=inputPanel.parentNode;//领取面板中输入框的直接容器
 		//var acquiringParentPanel=acquiringPanel.parentNode;//领取面板，用于判断是否全部领取完成
-		var closeBtn=panel.getElementsByTagName("button")[0];//关闭面板按钮
 		var refreshBtn=acquiringPanel.getElementsByTagName("button")[0];//刷新按键
 		var submitBtn=panel.getElementsByTagName("div")[2].getElementsByTagName("div")[2].getElementsByTagName("button")[3];//领取按键
 
