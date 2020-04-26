@@ -24,9 +24,9 @@ function(){
 		//var boxImg=boxPanelContainer.getElementsByTagName("div")[0];//宝箱图标节点，用于点击（可省略？
 		var panel=boxPanelContainer.getElementsByTagName("div")[2];//领瓜子面板总结点，用于判断是否需要关闭面板
 		console.log(panel);
-		var countDown=boxPanelContainer.getElementsByTagName("div")[1].getElementsByTagName("div")[1].getElementsByTagName("span")[1];//倒计时节点
+		var countDown=boxPanelContainer.getElementsByTagName("div")[1];//倒计时节点
 		console.log(countDown);
-		var inputPanel=boxPanelContainer.getElementsByTagName("div")[2].getElementsByTagName("div")[1].getElementsByTagName("input")[0];//输入框
+		var inputPanel=panel.getElementsByTagName("div")[1].getElementsByTagName("input")[0];//输入框
 		var acquiringPanel=inputPanel.parentNode;//领取面板中输入框的直接容器
 		//var acquiringParentPanel=acquiringPanel.parentNode;//领取面板，用于判断是否全部领取完成
 		var closeBtn=panel.getElementsByTagName("button")[0];//关闭面板按钮
